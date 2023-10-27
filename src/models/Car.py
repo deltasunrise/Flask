@@ -10,7 +10,7 @@ class Car:
         self.location = location
         self.status = status
 
-def listCars():
+def list_cars():
     cars = []
     driver = _get_connection()
     if driver != None:
