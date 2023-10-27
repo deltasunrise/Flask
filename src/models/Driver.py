@@ -12,5 +12,5 @@ def _get_connection() -> Driver:
         driver.verify_connectivity()
         return driver
     except Exception as e:
-        print(f"Error: ",e)
+        print("Error: {}".format(e))
         return None

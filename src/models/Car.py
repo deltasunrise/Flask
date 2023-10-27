@@ -34,7 +34,7 @@ def list_cars():
     print("Driver not connected")
     return cars
 
-def addCar(make,model,year,location,status):
+def add_car(make,model,year,location,status):
     driver = _get_connection()
     if driver != None:
         with driver.session() as session:
@@ -52,9 +52,9 @@ def addCar(make,model,year,location,status):
                 print(f"Error: {e}")
                 return
     print("Driver not connected")
-    return
+    
 
-def updateCar(id, newStatus):
+def update_car(id, newStatus):
     driver = _get_connection()
     if driver != None:
         with driver.session() as session:
@@ -67,13 +67,13 @@ def updateCar(id, newStatus):
                 print(f"ID: {id}, New Status: {newStatus}")
                 return
             except Exception as e:
-                print(f"Error: ",e)
+                print(f"Error: {e}")
                 print(f"{id} is not a Car.")
                 return
     print("Driver is not connected")
     return
 
-def deleteCar(id):
+def delete_car(id):
     driver = _get_connection()
     if driver != None:
         with driver.session() as session:
